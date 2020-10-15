@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#main {
+    word-break: break-all;
+}
+#yinyang {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+#yinyang::before {
+    position: absolute;
+    content: '';
+    display: block;
+}
+#yinyang::after {
+    position: absolute;
+    content: '';
+    display: block;
+}
+
+@media (max-width: 500px) {
+    #main {
+        height: 60vh;
+        overflow: auto;
+    }
+    #yinyang {
+        position: relative;
+        right: -50%;
+        transform: translateX(-50%);
+        top: 50px;
+    }
+}
